@@ -1,6 +1,6 @@
 import { Content } from './content';
 
-describe('Notification > Content', () => {
+describe('Entity > Notification > Content', () => {
   it('should be able to create a notification content', () => {
     const content = new Content('q'.repeat(5));
     expect(content).toBeTruthy();

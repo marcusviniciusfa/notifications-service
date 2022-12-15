@@ -12,6 +12,7 @@
 
 * Dependency Inversion (Na estrutura do NestJS)
 * Dependency Injection (Na estrutura do NestJS)
+* Single Responsability Principle (Nos Use Cases)
 * Domain Driven Design (DDD)
   * Entities
   * Value Objects
