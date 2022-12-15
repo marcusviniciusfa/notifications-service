@@ -16,6 +16,7 @@ model Notification {
   content     String
   category    String
   readAt      DateTime? // Pode ser nulo
+  canceledAt  DateTime?
   createdAt   DateTime  @default(now()) // Gerado automaticamente
 
   @@index([recipientId]) // Chave estrangeira

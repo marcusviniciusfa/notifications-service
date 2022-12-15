@@ -15,9 +15,10 @@ interface ISendNotificationResponse {
 
 @Injectable()
 export class SendNotification {
+  // Dependency Inversion Principle
   constructor(private notificationsRepository: NotificationsRepository) {}
 
-  // Single Responsability Principle
+  // Single Responsibility Principle
   async execute(request: ISendNotificationRequest): Promise<ISendNotificationResponse> {
     const { recipientId, content, category } = request;
     const notification = new Notification({

@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto';
 import { InMemoryNotificationsRepository } from 'test/repositories/in-memory-notifications-repository';
 import { SendNotification } from './send-notification';
 
@@ -13,7 +14,7 @@ describe('Use cases > Send notification', () => {
     const { notification } = await sendNotification.execute({
       content: 'q'.repeat(5),
       category: 'social',
-      recipientId: '1',
+      recipientId: randomUUID(),
     });
     expect(notificationsRepository.notifications).toHaveLength(1);
     expect(notificationsRepository.notifications[0]).toEqual(notification);
