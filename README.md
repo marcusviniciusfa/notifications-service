@@ -4,10 +4,10 @@
 
 ## Iniciando
 
-* `https://github.com/marcusviniciusfa/notifications-service.git` faça o download do repositório
+* `git clone https://github.com/marcusviniciusfa/notifications-service.git` faça o download do repositório notifications-service
 * `cd notifications-service` entre no diretório do projeto
-* `npm install` instale as depend6encias do projeto
-* `echo 'DATABASE_URL="file:./dev.db"' > .env` crie o arquivo .env com a variável de ambiente do host do banco de dados
+* `npm install` instale as dependências do projeto
+* `mv sample.env .env` renomeie o arquivo .env de amostra e popule as variáveis com os dados do Kafka
 
 ## Executando os testes
 
@@ -16,27 +16,32 @@
 ## Fazendo requisições
 
 * `npm run start:dev` inicie a aplicação em modo de desenvolvimento
-* Clique no botão abaixo para importar a collection de requests para o Insomnia, ou salve e importe o arquivo [notifications-service_requests-collection.har](https://gist.githubusercontent.com/marcusviniciusfa/759eccbb961dcef4cb23876e3368ff8e/raw/ec73a151b2b13fcdf1da68139bc823e905ac7990/notifications-service_requests-collection.har) para o seu REST Client de preferência.
+* Clique no botão abaixo para importar a collection de requests para o Insomnia, ou salve e importe o arquivo [notifications-service_requests-collection.har](https://gist.githubusercontent.com/marcusviniciusfa/609c76f9421e71d9bc280c0303cf83dd/raw/fe86e5a676bf0fe93d5040f430e3ddeb7fb9f0dd/notifications-service_request-collection.har) para o seu REST Client de preferência.
 
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=notifications-service&uri=https://gist.githubusercontent.com/marcusviniciusfa/759eccbb961dcef4cb23876e3368ff8e/raw/ec73a151b2b13fcdf1da68139bc823e905ac7990/notifications-service_requests-collection.json)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=notifications-service&uri=https://gist.githubusercontent.com/marcusviniciusfa/609c76f9421e71d9bc280c0303cf83dd/raw/fe86e5a676bf0fe93d5040f430e3ddeb7fb9f0dd/notifications-service_request-collection.json)
+
+## Consumindo notificações do Kafka
+
+* `git clone https://github.com/marcusviniciusfa/kafka-producer-to-notifications-service.git` faça o download do repositório kafka-producer-to-notifications-service e siga o passo a passo no README para produzir mensagens com notificações que serão consumidas pelo serviço de notificações
 
 ## Tecnologias utilizadas
 
 * NestJS
 * Prisma
 * Jest
+* Kafka
 
 ## Conceitos, padrões e princípios estudados
 
-* Dependency Inversion Principle (D do SOLI**D**. Utilizado nos use cases, e nos controllers)
-* Dependency Injection (Ex.: Decorator @Injectable na estrutura do NestJS)
-* Single Responsibility Principle (S do **S**OLID. Utilizado principalmente nos use cases)
-* Domain Driven Design (DDD)
-  * Entities (Ex.: Entidade Notification)
-  * Value Objects (Ex.: Entidade Content, utilizada para validação e teste unitário do conteúdo da notificação)
-* Repository Pattern
-* In-Memory-Database
-* Mappers
+* [x] Dependency Inversion Principle (D do SOLI**D**. Utilizado nos use cases, e nos controllers)
+* [x] Dependency Injection (Ex.: Decorator @Injectable na estrutura do NestJS)
+* [x] Single Responsibility Principle (S do **S**OLID. Utilizado principalmente nos use cases)
+* [x] Domain Driven Design (DDD)
+  * [x] Entities (Ex.: Entidade Notification)
+  * [x] Value Objects (Ex.: Entidade Content, utilizada para validação e teste unitário do conteúdo da notificação)
+* [x] Repository Pattern
+* [x] In-Memory-Database
+* [x] Mappers
 
 ## Comandos úteis
 
