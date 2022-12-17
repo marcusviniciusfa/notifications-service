@@ -22,7 +22,7 @@
 
 ## Consumindo notificações do Kafka
 
-* `git clone https://github.com/marcusviniciusfa/kafka-producer-to-notifications-service.git` faça o download do repositório kafka-producer-to-notifications-service e siga o passo a passo no README para produzir mensagens com notificações que serão consumidas pelo serviço de notificações
+* `git clone https://github.com/marcusviniciusfa/kafka-producer-to-notifications-service.git` faça o download do repositório [kafka-producer-to-notifications-service](https://github.com/marcusviniciusfa/kafka-producer-to-notifications-service) e siga o passo a passo no README para produzir mensagens com notificações que serão consumidas pelo serviço de notificações
 * `npx prisma studio` utilize o prisma studio para conseguir visualizar as notificações inseridas na tabela Notifications
 
 ## Tecnologias utilizadas
